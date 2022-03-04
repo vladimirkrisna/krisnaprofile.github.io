@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <a href="#aboutme">About Me</a>
+        <a href="#aboutme">Gallery</a>
+        <a href="">Contact us</a>
+    </div>
+    <div id="content">
+        <div class="hero-image">
+            <div class="hero-text">
+                <img src="img/me.jpeg">
+                <p>
+                    Saya adalah mahasiswa aktif <br>
+                    Sekolah Tinggi Manajemen Informatika dan Komputer <br>
+                    Indo Daya Suvana
+                </p>
+            </div>
+        </div>
+    <fieldset>
+        <div class="aboutme">
+            <h1 id="aboutme">About Me</h1>
+            <p>
+                Halo, izinkan saya memperkenalkan diri saya di sini. Nama saya <strong>Krisna Naufal Hidayatullah</strong>,
+                saya lahir di Jakarta 24 Juni 2001 saya anak kedua dari 3 bersaudara. Nama Kakak saya adalah Wisnu Adetias,
+                dan adik perempuan saya adalah Mutiara Ajeng. 
+            </p>
+            <p>
+                Di masa kecil saya, saya suka melakukan beberapa olahraga, seperti naik sepeda, berenang, berlari,
+                bermain bulu tangkis dan banyak lagi. Cita-cita saya dahulu adalah menjadi pimpinan militer, karena
+                saya merasa tokoh pemimpin militer merupakan orang yang sangat tegas dan memiliki karisma yang luar biasa.
+            </p>
+            <p>
+                Saat ini saya mengambil jurusan Teknik Informatika di, STMIK Indo Daya Suvana dengan IPK Saat Ini dari 3,94/4,00.
+                Saya sangat tertarik dengan Pemrograman terutama di Pengembang Web, Desain Web dan Administrator Basis Data.
+                Saya melihat diri saya sebagai orang yang berorientasi pada detail, cepat belajar, setia, bersedia untuk mengambil
+                tantangan untuk mendapatkan lebih banyak pengalaman, dan manajemen waktu yang baik. Saya bisa bekerja dengan baik,
+                keduanya secara individu dan dalam tim.
+            </p>
+        </div>
+        <div class="gallery">
+            <table align="center">
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <h1 id="gallery">Galeri</h1>
+                            <p>Makanan & Minuman Favorite</p>
+                        </td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td><img src="img/nasi-goreng.jpg"></td>
+                    <td><img src="img/rendang.jpg"></td>
+                    <td><img src="img/kopi.jpg"></td>
+                    <td><img src="img/teh-manis.jpg"></td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+        <div class="contactus">
+            <fieldset>
+                <form action="">
+                    <table>
+                        <h1 id="contactus">Contact Us</h1>
+                        <tr>
+                            <td><label for="name">Nama :</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="nama" placeholder="Nama Lengkap" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email :</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="nama" placeholder="Email" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="tanggal-lahir">Tanggal Lahir :</label></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="tanggal" name="tanggal">
+                                  <script>
+                                    var tgl = 1;
+                                    while (tgl <= 31) {
+                                      document.write(`<option>${tgl}</option>`);
+                                      tgl++;
+                                    }
+                                  </script>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="bulan" name="bulan">
+                                  <script>
+                                    const bulan = [
+                                      "Januari",
+                                      "Februari",
+                                      "Maret",
+                                      "April",
+                                      "Mei",
+                                      "Juni",
+                                      "Juli",
+                                      "Agustus",
+                                      "September",
+                                      "Oktober",
+                                      "November",
+                                      "Desember",
+                                    ];
+                  
+                                    for (let bln in bulan) {
+                                      document.write(`<option>${bulan[bln]}</option>`);
+                                    }
+                                  </script>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="tahun" name="tahun">
+                                    <script> 
+                                      for (var tahun = 2022; tahun >= 1922; tahun--) {
+                                        if (tahun > 2009)continue;
+                                        if (tahun < 1962)break;
+                                        document.write(`<option>${tahun}</option>`);
+                                      }
+                                    </script>
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="k&s">Kritik dan Saran :</label></td>
+                        </tr>
+                        <tr>
+                            <td><textarea name="k&s" cols="50" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit" name="submit">Submit</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>
